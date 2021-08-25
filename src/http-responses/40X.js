@@ -1,7 +1,7 @@
 import GeneralError from '~/http-responses/GeneralError'
 
 export class MissingParamError extends GeneralError {
-  constructor(paramName) {
+  constructor (paramName) {
     super()
     this.error = `Required parameter: ${paramName}`
     this.statusCode = 400

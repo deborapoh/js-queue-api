@@ -6,8 +6,8 @@ import { produceMessage, consumeMessages } from '~/controllers/queue'
 
 import { HttpCreated, HttpOK } from '~/http-responses/20X'
 
-import { getRequiredParamsForMessage } from '~/utils/paramsParser'
-import { processMessages } from '~/utils/fakeProcessing'
+import { getRequiredParamsForMessage } from '~/utils/params-parser'
+import { processMessages } from '~/utils/fake-processing'
 
 const router = express.Router()
 const messageQueue = new Queue()

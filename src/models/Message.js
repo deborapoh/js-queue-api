@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { MESSAGE_STATUS } from '~/utils/enum'
 
 class Message {
-  constructor(textMessage, processingTime = 1) {
+  constructor (textMessage, processingTime = 1) {
     this.messageId = uuidv4()
     this.textMessage = textMessage
     this.processingTime = processingTime
@@ -13,12 +13,12 @@ class Message {
     this.updatedAt = null
   }
 
-  updateMessage() {
+  updateMessage () {
     this.updatedAt = new Date()
     this.status = 'pending'
   }
 
-  setStatus(statusId) {
+  setStatus (statusId) {
     this.updatedAt = new Date()
     if (statusId === 'processing') {
       this.try++

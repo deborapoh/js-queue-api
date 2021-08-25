@@ -1,26 +1,26 @@
 class Queue {
-  constructor() {
+  constructor () {
     this.size = 0
     this.queue = []
   }
 
-  resetQueue() {
+  resetQueue () {
     this.size = 0
     this.queue = []
   }
 
-  enqueue(message) {
+  enqueue (message) {
     this.queue.push(message)
     this.size++
   }
 
-  requeue(message) {
+  requeue (message) {
     const index = this.queue.findIndex(item => item.messageId === message.messageId)
     this.queue.push(message)
     this.queue.splice(index, 1)
   }
 
-  dequeue(messageId) {
+  dequeue (messageId) {
     if (this.isEmpty()) {
       return
     }
@@ -31,7 +31,7 @@ class Queue {
     this.queue.splice(index, 1)
   }
 
-  peek() {
+  peek () {
     let i = 0
     let message = null
 
@@ -51,7 +51,7 @@ class Queue {
     return message
   }
 
-  isEmpty() {
+  isEmpty () {
     return this.queue.length === 0
   }
 }
