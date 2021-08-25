@@ -51,7 +51,7 @@ This project was created as a test for a startup company
 1. Clone this repository into your local machine using http or
     ssh
     ```bash
-      git clone https://github.com/deborapoh/queue-api.git
+      git clone https://github.com/deborapoh/js-queue-api.git
     ```
 
 
@@ -85,25 +85,25 @@ You can find Postman documentation [here](https://documenter.getpostman.com/view
 
 
 # Tests
-    ```bash
-      # to test application
-      yarn test
-    ```
+```bash
+  # to test application
+  yarn test
+```
 
 
 # Deploying to production
   When deploying the queue, if there is need for scale. One can go to a few directions:
 
-      - If deploying in AWS:
-            - You can create an auto scaling group to manage EC2 instances, together with a Amazon CloudWatch that measures the number of messages in the queue per EC2 instance in the Auto Scaling group and an alarm that invokes the scaling policy.
+  - If deploying in AWS:
+        - You can create an auto scaling group to manage EC2 instances, together with a Amazon CloudWatch that measures the number of messages in the queue per EC2 instance in the Auto Scaling group and an alarm that invokes the scaling policy.
 
-      - You can also increase the number of threads and add more clients.
+  - You can also increase the number of threads and add more clients.
 
-      - You can also use KafkaJS that is already highly recomended for handling too many messages concurrently.
+  - You can also use KafkaJS that is already highly recomended for handling too many messages concurrently.
 
-      - You can also use RabbitMQ, although rabbit is not recomended for handling too many messages concurrently.
+  - You can also use RabbitMQ, although rabbit is not recomended for handling too many messages concurrently.
 
-      - You can also use AWS SQS.
+  - You can also use AWS SQS.
 
 
 # License
